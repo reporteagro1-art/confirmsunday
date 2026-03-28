@@ -8,7 +8,7 @@ export default function StepWelcome({ onNext }: Props) {
       <h1 className="font-serif text-3xl font-semibold text-[#1e3a5f] mb-2">
         Welcome to ConfirmSunday!
       </h1>
-      <p className="text-gray-500 text-sm mb-8 font-light">
+      <p className="text-gray-500 text-base mb-8 font-light">
         Let&apos;s get you set up in about 10 minutes. Here&apos;s what we&apos;ll do:
       </p>
 
@@ -27,7 +27,7 @@ export default function StepWelcome({ onNext }: Props) {
           {
             n: '3',
             title: 'Assign volunteers to each role',
-            desc: 'Set who serves each week and who backs them up if they can\'t make it.',
+            desc: "Set who serves each week and who backs them up if they can't make it.",
           },
           {
             n: '4',
@@ -36,12 +36,12 @@ export default function StepWelcome({ onNext }: Props) {
           },
         ].map(item => (
           <div key={item.n} className="bg-white border border-[#e8e6e0] rounded-xl p-4 flex gap-4 items-start">
-            <div className="w-8 h-8 bg-[#eff6ff] border border-[#bfdbfe] rounded-full flex items-center justify-center text-[#2563eb] text-sm font-medium flex-shrink-0">
+            <div className="w-9 h-9 bg-[#eff6ff] border border-[#bfdbfe] rounded-full flex items-center justify-center text-[#2563eb] text-sm font-medium flex-shrink-0">
               {item.n}
             </div>
             <div>
-              <div className="font-medium text-sm mb-0.5">{item.title}</div>
-              <div className="text-gray-500 text-xs font-light">{item.desc}</div>
+              <div className="font-medium text-base mb-1">{item.title}</div>
+              <div className="text-gray-500 text-sm font-light">{item.desc}</div>
             </div>
           </div>
         ))}
@@ -50,7 +50,7 @@ export default function StepWelcome({ onNext }: Props) {
       <div className="flex justify-end">
         <button
           onClick={onNext}
-          className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-medium py-3 px-8 rounded-lg text-sm transition-colors"
+          className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-medium py-3 px-8 rounded-lg text-base transition-colors"
         >
           Let&apos;s go →
         </button>

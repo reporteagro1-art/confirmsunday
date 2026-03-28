@@ -49,20 +49,20 @@ export default function StepSchedule({ schedule, onChange, onBack }: Props) {
       <h1 className="font-serif text-3xl font-semibold text-[#1e3a5f] mb-2">
         Set your schedule
       </h1>
-      <p className="text-gray-500 text-sm mb-6 font-light">
+      <p className="text-gray-500 text-base mb-6 font-light">
         When should ConfirmSunday send emails each week? You can change this any time.
       </p>
 
       <div className="bg-white border border-[#e8e6e0] rounded-xl p-5 mb-5">
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
-            <label className="block text-xs font-medium text-gray-700 mb-1.5">
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
               Send confirmations on
             </label>
             <select
               value={form.sendDay}
               onChange={e => update('sendDay', e.target.value)}
-              className="w-full px-3 py-2.5 border border-[#e8e6e0] rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent"
+              className="w-full px-3 py-2.5 border border-[#e8e6e0] rounded-lg text-base bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent"
             >
               <option>Monday</option>
               <option>Tuesday</option>
@@ -73,13 +73,13 @@ export default function StepSchedule({ schedule, onChange, onBack }: Props) {
             </div>
           </div>
           <div>
-            <label className="block text-xs font-medium text-gray-700 mb-1.5">
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
               At what time
             </label>
             <select
               value={form.sendHour}
               onChange={e => update('sendHour', e.target.value)}
-              className="w-full px-3 py-2.5 border border-[#e8e6e0] rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent"
+              className="w-full px-3 py-2.5 border border-[#e8e6e0] rounded-lg text-base bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent"
             >
               <option>9:00 AM</option>
               <option>10:00 AM</option>
@@ -88,13 +88,13 @@ export default function StepSchedule({ schedule, onChange, onBack }: Props) {
             </select>
           </div>
           <div>
-            <label className="block text-xs font-medium text-gray-700 mb-1.5">
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
               Your service time
             </label>
             <select
               value={form.serviceTime}
               onChange={e => update('serviceTime', e.target.value)}
-              className="w-full px-3 py-2.5 border border-[#e8e6e0] rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent"
+              className="w-full px-3 py-2.5 border border-[#e8e6e0] rounded-lg text-base bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent"
             >
               <option>8:00 AM</option>
               <option>9:00 AM</option>
@@ -105,13 +105,13 @@ export default function StepSchedule({ schedule, onChange, onBack }: Props) {
             </select>
           </div>
           <div>
-            <label className="block text-xs font-medium text-gray-700 mb-1.5">
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
               Your timezone
             </label>
             <select
               value={form.timezone}
               onChange={e => update('timezone', e.target.value)}
-              className="w-full px-3 py-2.5 border border-[#e8e6e0] rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent"
+              className="w-full px-3 py-2.5 border border-[#e8e6e0] rounded-lg text-base bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent"
             >
               {TIMEZONES.map(tz => (
                 <option key={tz.value} value={tz.value}>{tz.label}</option>
@@ -121,7 +121,7 @@ export default function StepSchedule({ schedule, onChange, onBack }: Props) {
         </div>
 
         {/* Preview */}
-        <div className="bg-[#f5f4ef] rounded-lg px-4 py-3 text-xs text-gray-600 font-light">
+        <div className="bg-[#f5f4ef] rounded-lg px-4 py-3 text-sm text-gray-600 font-light">
           Confirmation emails will go out every{' '}
           <strong className="text-gray-900">{form.sendDay} at {form.sendHour}</strong>.
           {' '}Volunteers reply for your{' '}
@@ -132,18 +132,18 @@ export default function StepSchedule({ schedule, onChange, onBack }: Props) {
 
       {/* Test email */}
       <div className="bg-[#eff6ff] border border-[#bfdbfe] rounded-xl p-4 mb-6">
-        <div className="text-sm font-medium text-[#1d4ed8] mb-1">
+        <div className="text-base font-medium text-[#1d4ed8] mb-1">
           Send a test email to yourself
         </div>
-        <div className="text-xs text-[#1d4ed8] font-light mb-3">
+        <div className="text-sm text-[#1d4ed8] font-light mb-3">
           See exactly what your volunteers will receive before anything goes live.
         </div>
         {testSent ? (
-          <div className="text-xs text-[#16a34a] font-medium">✓ Test email sent — check your inbox!</div>
+          <div className="text-sm text-[#16a34a] font-medium">✓ Test email sent — check your inbox!</div>
         ) : (
           <button
             onClick={() => setTestSent(true)}
-            className="bg-white border border-[#bfdbfe] hover:border-[#2563eb] text-[#2563eb] font-medium py-2 px-4 rounded-lg text-xs transition-colors"
+            className="bg-white border border-[#bfdbfe] hover:border-[#2563eb] text-[#2563eb] font-medium py-2 px-4 rounded-lg text-sm transition-colors"
           >
             Send test email
           </button>
@@ -151,13 +151,13 @@ export default function StepSchedule({ schedule, onChange, onBack }: Props) {
       </div>
 
       <div className="flex justify-between">
-        <button onClick={onBack} className="bg-white border border-[#e8e6e0] hover:border-gray-400 text-gray-700 font-medium py-3 px-6 rounded-lg text-sm transition-colors">
+        <button onClick={onBack} className="bg-white border border-[#e8e6e0] hover:border-gray-400 text-gray-700 font-medium py-3 px-6 rounded-lg text-base transition-colors">
           ← Back
         </button>
         <button
           onClick={handleGoLive}
           disabled={loading}
-          className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-medium py-3 px-8 rounded-lg text-sm transition-colors disabled:opacity-70"
+          className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-medium py-3 px-8 rounded-lg text-base transition-colors disabled:opacity-70"
         >
           {loading ? 'Setting up...' : 'Go live! →'}
         </button>
