@@ -1,15 +1,16 @@
 import Link from 'next/link'
 
 const screens = [
-  { label: 'Sign up',              path: '/auth/signup',             desc: 'New coordinator account creation' },
-  { label: 'Log in',               path: '/auth/login',              desc: 'Returning coordinator' },
-  { label: 'Setup wizard',         path: '/dashboard/setup',         desc: '5-step onboarding flow' },
-  { label: "You're live",          path: '/dashboard/setup/complete',desc: 'After setup is done' },
-  { label: 'Dashboard',            path: '/dashboard',               desc: 'Weekly status view' },
-  { label: 'Magic link — pending', path: '/confirm/preview',         desc: 'Volunteer sees YES / NO' },
-  { label: 'Magic link — cancel',  path: '/confirm/preview?state=confirmed', desc: 'Already confirmed, wants to cancel' },
-  { label: 'Friday SMS',           path: '/friday',                  desc: 'Coordinator Friday summary' },
-  { label: 'Sunday morning',       path: '/sunday',                  desc: 'All clear view' },
+  { label: 'Landing page',          path: '/landing',                       desc: 'Marketing home page' },
+  { label: 'Sign up',               path: '/auth/signup',                   desc: 'New coordinator account creation' },
+  { label: 'Log in',                path: '/auth/login',                    desc: 'Returning coordinator' },
+  { label: 'Setup wizard',          path: '/dashboard/setup',               desc: '5-step onboarding flow' },
+  { label: "You're live",           path: '/dashboard/setup/complete',      desc: 'After setup is done' },
+  { label: 'Dashboard',             path: '/dashboard',                     desc: 'Weekly status view' },
+  { label: 'Magic link — pending',  path: '/confirm/preview',               desc: 'Volunteer sees YES / NO' },
+  { label: 'Magic link — cancel',   path: '/confirm/preview?state=confirmed', desc: 'Already confirmed, wants to cancel' },
+  { label: 'Friday SMS',            path: '/friday',                        desc: 'Coordinator Friday summary' },
+  { label: 'Sunday morning',        path: '/sunday',                        desc: 'All clear view' },
 ]
 
 export default function Home() {
