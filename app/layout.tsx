@@ -1,18 +1,5 @@
 import type { Metadata } from "next";
-import { Lora, DM_Sans } from "next/font/google";
 import "./globals.css";
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
-  weight: ["400", "500", "600", "700"],
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  weight: ["300", "400", "500", "600"],
-});
 
 export const metadata: Metadata = {
   title: "ConfirmSunday — Volunteer Confirmation for Churches",
@@ -26,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lora.variable} ${dmSans.variable} antialiased`}>
+      <body className="antialiased">
         {children}
       </body>
     </html>

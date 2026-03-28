@@ -20,7 +20,7 @@ export default async function DashboardPage() {
         <span className="font-serif text-xl font-semibold text-[#1e3a5f]">ConfirmSunday</span>
         <div className="flex items-center gap-4">
           <span className="text-sm text-gray-500">
-            {coordinator?.name} &middot; {(coordinator?.churches as any)?.name}
+            {coordinator?.name} &middot; {(coordinator?.churches as unknown as { name: string } | null)?.name}
           </span>
           <form action={signOut}>
             <button type="submit" className="text-sm text-gray-500 hover:text-gray-700">
